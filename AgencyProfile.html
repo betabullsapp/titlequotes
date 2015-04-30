@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!--end up to own css with bootsrtap -->
     <!--start with keen themes css scripts link-->
-
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link href="~/Scripts/jquery.fileupload.css" rel="stylesheet" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
@@ -94,12 +95,12 @@
                     </a>&nbsp;&nbsp;&nbsp;
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="LoanOfficerUserProfile.html">
+                            <a href="AgencyDashboard.html">
                                 <i class="icon-user"></i> My Profile
                             </a>
                         </li>
                         <li>
-                            <a href="ChangePassword.html">
+                            <a href="AgencyChangepassword.html">
                                 <i class="icon-key"></i> Change password
                             </a>
                         </li>
@@ -149,7 +150,7 @@
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
                     <li >
-                        <a href="LoanOfficerDashboard.html">
+                        <a href="AgencyDashboard.html">
                             <i class="icon-home"></i>
                             <span class="title">Dashboard</span>
                            
@@ -157,16 +158,9 @@
                         </a>
 
                     </li>
-                    <li>
-                        <a href="CreateLoan.html">
-                            <i class="icon-user"></i>
-                            <span class="title">Create Loan Information</span>
-                            <span class="arrow "></span>
-                        </a>
-
-                    </li>
+                    
                     <li class="start active open">
-                        <a href="LoanOfficerUserProfile.html">
+                        <a href="AgencyProfile.html">
                             <i class="icon-check"></i>
                             <span class="title">My Profile</span>
 							<span class="selected"></span>
@@ -174,7 +168,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="ChangePassword.html">
+                        <a href="AgencyChangePassword.html">
                             <i class="icon-question"></i>
                             <span class="title">Change Password</span>
 
@@ -189,7 +183,7 @@
 			 <h2>Profile information</h2>
     <hr />
 
-<div action="#" class="form-horizontal  col-md-3" >
+<div action="#" class="form-horizontal pull-left col-md-3">
         <div class="portlet light profile-sidebar-portlet">
             <!-- SIDEBAR USERPIC -->
             <div class="profile-userpic">
@@ -200,12 +194,13 @@
                 <span>Change Avatar..!</span>
                 <input type="file" onchange="CopyMe(this, 'txtFileName');" id="fu-my-simple-upload" class="file ">
             </span>
-            
+           
         </div>
-        
-        
+       
+
     </div>
-	<div action="#" class="form-horizontal pull-left col-md-3">
+    <!-- END FORM-->
+    <div action="#" class="form-horizontal col-md-3">
         <div class="form-body">
             <div class="form-group">
 
@@ -237,57 +232,154 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-body">
 
+                <div class="">
+                    <label class="">Number of Years in Operation</label>
+                    <br />
+                    <div class="form-inline" >
+                        <select class="form-control " id="selectoperation">
+                            <option value="1" class="option">1</option>
+                            <option value="2" class="option">2</option>
+                            <option value="3" class="option">3</option>
+                            <option value="4" class="option">4</option>
+                            <option value="5" class="option">5</option>
+                            <option value="6" class="option">6</option>
+                            <option value="7" class="option">7</option>
+                            <option value="8" class="option">8</option>
+                            <option value="9" class="option">9</option>
+                            <option value="10" class="option">10</option>
+                            <option value="other" class="option">Other</option>
+                        </select>
+                        <input type="text" class="form-control " id="operationother" placeholder="Other">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
                 <div class="col-md-10">
-                    <label>Home Number</label>
-                    <input type="text" class="form-control " placeholder="home number">
+                    <label>Number of Employees</label>
+                    <input type="text" class="form-control " placeholder="">
                 </div>
             </div>
             <div class="form-group">
-
                 <div class="col-md-10">
-                    <label>Mobile Number</label>
-                    <input type="text" class="form-control " placeholder="mobile number">
-                </div>
-            </div>
-            <div class="form-group">
-
-                <div class="col-md-10">
-                    <label>Company Name</label>
-                    <input type="text" class="form-control " placeholder="Company name">
+                    <label>States in which you are licensed</label>
+                    <select multiple="" class="form-control ">
+                        <option class="option">Alabama</option>
+                        <option class="option">Alaska</option>
+                        <option class="option">Arizona</option>
+                        <option class="option">Arkansas</option>
+                        <option class="option">California</option>
+                        <option class="option">Colorado</option>
+                        <option class="option">Connecticut</option>
+                        <option class="option">Delaware</option>
+                        <option class="option">Florida</option>
+                        <option class="option">Georgia</option>
+                        <option class="option">Hawaii</option>
+                        <option class="option">Idaho</option>
+                        <option class="option">Illinois</option>
+                        <option class="option">Kansas</option>
+                        <option class="option">Kentucky</option>
+                        <option class="option">Louisiana</option>
+                        <option class="option">Maine</option>
+                        <option class="option">Maryland</option>
+                        <option class="option">Massachusetts</option>
+                        <option class="option">Michigan</option>
+                        <option class="option">Minnesota</option>
+                        <option class="option">Mississippi</option>
+                        <option class="option">Missouri</option>
+                        <option class="option">Montana</option>
+                        <option class="option">Nebraska</option>
+                        <option class="option">Nevada</option>
+                        <option class="option">New Hampshire</option>
+                        <option class="option">New Jersey</option>
+                        <option class="option">New Mexico</option>
+                        <option class="option">New York</option>
+                        <option class="option">North Carolina</option>
+                        <option class="option">North Dakota</option>
+                        <option class="option">Ohio</option>
+                        <option class="option">Oklahoma</option>
+                        <option class="option">Oregon</option>
+                        <option class="option">Pennsylvania</option>
+                        <option class="option">Rhode Island</option>
+                        <option class="option">South Carolina</option>
+                        <option class="option">South Dakota</option>
+                        <option class="option">Tennessee</option>
+                        <option class="option">Texas</option>
+                        <option class="option">Utah</option>
+                        <option class="option">Vermont</option>
+                        <option class="option">Virginia</option>
+                        <option class="option">Washington</option>
+                        <option class="option">West Virginia</option>
+                        <option class="option">Wisconsin</option>
+                        <option class="option">Wyoming</option>
+                    </select>
                 </div>
             </div>
         </div>
     </div>
-	
-	<div action="#" class="form-horizontal col-md-3">
+
+    <div action="#" class="form-horizontal col-md-3">
         <div class="form-body">
             <div class="form-group">
-
                 <div class="col-md-10">
-                    <label>Address</label>
-                    <input type="text" class="form-control " placeholder="address">
+                    <label>Coverage Area by State</label>
+                    <select class="form-control ">
+                        <option class="option">Alabama</option>
+                        <option class="option">Alaska</option>
+                        <option class="option">Arizona</option>
+                        <option class="option">Arkansas</option>
+                        <option class="option">California</option>
+                        <option class="option">Colorado</option>
+                        <option class="option">Connecticut</option>
+                        <option class="option">Delaware</option>
+                        <option class="option">Florida</option>
+                        <option class="option">Georgia</option>
+                        <option class="option">Hawaii</option>
+                        <option class="option">Idaho</option>
+                        <option class="option">Illinois</option>
+                        <option class="option">Kansas</option>
+                        <option class="option">Kentucky</option>
+                        <option class="option">Louisiana</option>
+                        <option class="option">Maine</option>
+                        <option class="option">Maryland</option>
+                        <option class="option">Massachusetts</option>
+                        <option class="option">Michigan</option>
+                        <option class="option">Minnesota</option>
+                        <option class="option">Mississippi</option>
+                        <option class="option">Missouri</option>
+                        <option class="option">Montana</option>
+                        <option class="option">Nebraska</option>
+                        <option class="option">Nevada</option>
+                        <option class="option">New Hampshire</option>
+                        <option class="option">New Jersey</option>
+                        <option class="option">New Mexico</option>
+                        <option class="option">New York</option>
+                        <option class="option">North Carolina</option>
+                        <option class="option">North Dakota</option>
+                        <option class="option">Ohio</option>
+                        <option class="option">Oklahoma</option>
+                        <option class="option">Oregon</option>
+                        <option class="option">Pennsylvania</option>
+                        <option class="option">Rhode Island</option>
+                        <option class="option">South Carolina</option>
+                        <option class="option">South Dakota</option>
+                        <option class="option">Tennessee</option>
+                        <option class="option">Texas</option>
+                        <option class="option">Utah</option>
+                        <option class="option">Vermont</option>
+                        <option class="option">Virginia</option>
+                        <option class="option">Washington</option>
+                        <option class="option">West Virginia</option>
+                        <option class="option">Wisconsin</option>
+                        <option class="option">Wyoming</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
-
                 <div class="col-md-10">
-                    <label>City</label>
-                    <input type="text" class="form-control " placeholder="city">
-                </div>
-            </div>
-            <div class="form-group">
-
-                <div class="col-md-10">
-                    <label>State</label>
-                    <input type="text" class="form-control " placeholder="state">
-                </div>
-            </div>
-            <div class="form-group">
-
-                <div class="col-md-10">
-                    <label>Country</label>
+                    <label>Coverage Area by Country</label>
                     <select class="form-control ">
                         <option class="option">Select a Country</option>
                         <option class="option">Afghanistan</option>
@@ -462,41 +554,113 @@
                 </div>
             </div>
             <div class="form-group">
-
                 <div class="col-md-10">
-                    <label>Zip/Postal Code</label>
-                    <input type="text" class="form-control " placeholder="postal code">
+                    <label>Names of underwriters for whom you are an agent</label>
+                    <input type="text" class="form-control " placeholder="">
                 </div>
             </div>
             <div class="form-group">
-
                 <div class="col-md-10">
-                    <label></label>
-                    <input type="text" style="display:none" class="form-control " placeholder="postal code">
+                    <label>Amount of E&O coverage</label>
+                    <input type="text" class="form-control " placeholder="Amount $">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Amount of deductible</label>
+                    <input type="text"  class="form-control " placeholder="Deducible Amount $">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Do you have a fidelity bond?</label>
+                    <div class="input-group">
+                        <div class="icheck-inline">
+                            <label>
+                                <input type="radio" name="radio" class="icheck"> yes
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" checked class="icheck"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div action="#" class="form-horizontal col-md-3">
+        <div class="form-body">
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Do you have physical locations?</label>
+                    <div class="input-group">
+                        <div class="icheck-inline">
+                            <label>
+                                <input type="radio" name="radio1" class="icheck"> yes
+                            </label>
+                            <label>
+                                <input type="radio" name="radio1" checked class="icheck"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Number of title claims filed against you</label>
+                    <div class="input-group">
+                        <div class="icheck-inline">
+                            <label>
+                                <input type="radio" name="radio2" class="icheck">Zero
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2"  class="icheck">1-5
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2"  class="icheck">6-10
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2"  class="icheck">11-20
+                            </label>
+                            <label class="check">
+                                <input type="radio" name="radio2" class="icheck">Greate than 20
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Average turn time from order entry to commitment sent</label>
+                    <input type="text" class="form-control " placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Average turn time from order entry to clear to close</label>
+                    <input type="text" class="form-control " placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control " placeholder="">
                 </div>
             </div>
         </div>
         <div class="form-group">
-            
             <div class="col-md-10">
                 <label class=""></label>
-                <a href="LoanOfficerDashboard.html" onclick="return alert('Profile Saved Successfully..!')" class="btn btn-success col-md-4">Save</a>
+                <button type="button" class="btn btn-success col-md-4">Save</button>
             </div>
         </div>
-
     </div>
-    <!-- END FORM-->
-   
-	<div class="clearfix">
-			</div>
-			
-			</div>
 			</div>
 	</div>
 </div>
 
 			<div class="Copy-right" style="  color: white;">
-        <span class="page-footer-inner"> 2015 © Business Management Portal by Title Quotes.<a href="LoanOfficerDashboard2.html" style="  color: white">Dashboard</a></span>
+        <span class="page-footer-inner"> 2015 © Business Management Portal by Title Quotes.</span><a href="AgencyDashboard2.html">Dashboarad2</a>
 		<div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
         </div>
@@ -564,9 +728,10 @@
             ComponentsPickers.init();
         });
     </script>
-	<script>
+	
+<script>
 
-    
+    $(function () {
         $('#fu-my-simple-upload').change(function (e) {
 
             var img = URL.createObjectURL(e.target.files[0]);
@@ -577,8 +742,35 @@
                 preventDefault(e);
             }
         });
+    });
+
+
+
+    function CopyMe(oFileInput, sTargetID) {
+        var arrTemp = oFileInput.value.split(':');
+        document.getElementById(sTargetID).value = arrTemp[arrTemp.length - 1];
+    }
+
+    $("#fu-my-simple-upload").on('change', function () {
+        $("#txtFileName").val(this.files[0].name);
+    });
+    $(window).load(function () { $('#operationother').hide(); })
+
     
+        $('#selectoperation').change(function () {
+
+            if ($(this).val() == 'other') {
+                $('#operationother').show();
+            }
+            else if($(this).val() != 'other')
+            {
+                $('#operationother').hide();
+            }
+        });
+   
     
+
+
 </script>
 	</body>
 </html>

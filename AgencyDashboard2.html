@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title Quotes</title>
 
-<link href="./Scripts/jquery.fileupload.css" rel="stylesheet" />
     <link href="./Content/bootstrap.css" rel="stylesheet" />
     <link href="./Content/bootstrap.min.css" rel="stylesheet" />
     <link href="./Content/Site.css" rel="stylesheet" />
     <link href="./Content/Title.css" rel="stylesheet" />
+	<link href="./Content/port.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!--end up to own css with bootsrtap -->
     <!--start with keen themes css scripts link-->
@@ -43,7 +43,6 @@
     <link href="./themes/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
     <link href="./themes/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="./themes/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./Content/style.css">
     <link rel="stylesheet" href="./Content/style.css">
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico" />
@@ -94,12 +93,12 @@
                     </a>&nbsp;&nbsp;&nbsp;
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="LoanOfficerUserProfile.html">
+                            <a href="AgencyProfile.html">
                                 <i class="icon-user"></i> My Profile
                             </a>
                         </li>
                         <li>
-                            <a href="ChangePassword.html">
+                            <a href="AgencyChangepassword.html">
                                 <i class="icon-key"></i> Change password
                             </a>
                         </li>
@@ -125,8 +124,8 @@
     <div class="page-container">
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar-wrapper">
-            <div class="page-sidebar navbar-collapse collapse" >
-                 <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="background-color:white;border:1px solid #000">
+            <div class="page-sidebar navbar-collapse collapse">
+                <ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="background-color:white;border:1px solid #000">
                     <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                     <li class="sidebar-toggler-wrapper">
                         <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -148,100 +147,435 @@
                         </form>
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
-                    <li >
-                        <a href="LoanOfficerDashboard.html">
+                    <li class="start active open">
+                        <a href="AgencyDashboard.html">
                             <i class="icon-home"></i>
                             <span class="title">Dashboard</span>
-                            
-                            <span class="arrow "></span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
                         </a>
 
                     </li>
-                    <li >
-                        <a href="CreateLoan.html">
-                            <i class="icon-user"></i>
-                            <span class="title">Create Loan Information</span>
-							
-                            <span class="arrow "></span>
-                        </a>
-
-                    </li>
+                    
                     <li>
-                        <a href="LoanOfficerUserProfile.html">
+                        <a href="AgencyProfile.html">
                             <i class="icon-check"></i>
                             <span class="title">My Profile</span>
                             <span class="arrow "></span>
                         </a>
                     </li>
-                    <li class="start active open">
-                        <a href="ChangePassword.html">
+                    <li>
+                        <a href="AgencyChangepassword.html">
                             <i class="icon-question"></i>
                             <span class="title">Change Password</span>
-							<span class="selected" ></span>
-							 <span class="arrow open"></span>
+
                         </a>
                     </li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>
         </div>
+
 <div class="page-content-wrapper" style="background-color: white;">
-            <div class="page-content top1">
-			 <h2>Change Password</h2>
-    <hr />
+            <div class="page-content">
+						
+			<!-- BEGIN PAGE HEADER-->
+			<h3 class="page-title">
+			Dashboard <small>Quotes &amp; statistics</small>
+			</h3>
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#">Home</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="#">Dashboard</a>
+					</li>
+				</ul>
+                <div class="page-toolbar" >
+                    <div class="btn-group">
+                        <button type="button" class=" tooltips btn btn-fit-height grey-salt" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                            <i class="fa fa-calendar"></i>&nbsp;<span>4</span>/<span>20</span>/<span>2015</span>
+                        </button>
 
-	
-	<form action="#" class="form-horizontal ">
-        <div class="form-body">
-            <div class="form-group">
-                <label class="col-md-3 control-label">Current Password</label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="*********">
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="form-body">
-            <div class="form-group">
-                <label class="col-md-3 control-label">New Password</label>
-                <div class="col-md-6 input-icon">
-				 <i class="fa fa-lock"></i>
-                    <input type="password" class="form-control " placeholder="*********">
-                </div>
-            </div>
-        </div>
-        <div class="form-body">
-            <div class="form-group">
-                <label class="col-md-3 control-label">Re-enter Password</label>
-                <div class="col-md-6 input-icon">
-				 <i class="fa fa-check"></i>
-                    <input type="password" class="form-control " placeholder="*********">
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label"></label>
-            <div class="col-md-6">
-                <a href="LoanOfficerDashboard.html" onclick="return alert('Reset password successfully')" class="btn btn-success">Save</a>
-            </div>
-        </div>
-    </form>
-    <!-- END FORM-->
-   
-	<div class="clearfix">
+               <!--  <div class="page-toolbar" >	
+                    <span>
+    <img src="./images/STRONG_Loan_icon_1.jpg" class="useriamge1" />
+</span>
+                    <div class="btn-group pull-right">
+                        
+                        <a  href="CreateLoan.html" class=" tooltips btn btn-fit-height grey-salt" >
+                            Create New Loan
+                        </a>
+
+                    </div>
+                </div> -->
+				<!--div class="page-toolbar">
+					<div id="dashboard-report-range" class="pull-right tooltips btn btn-fit-height grey-salt" data-placement="top" data-original-title="Change dashboard date range">
+						<i class="icon-calendar"></i>&nbsp; <span class="thin uppercase visible-lg-inline-block">March 18, 2015 - April 16, 2015</span>&nbsp; <i class="fa fa-angle-down"></i>
+					</div>
+				</div-->
 			</div>
 			
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN DASHBOARD STATS -->
+			<div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat blue-madison">
+                    <div class="visual">
+                        <i class="fa fa-reply-all"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            10
+                        </div>
+                        <div class="desc">
+                            No. of Quotes Responded
+                        </div>
+                    </div>
+                    <a class="more" href="#">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat red-intense">
+                    <div class="visual">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            20
+                        </div>
+                        <div class="desc">
+                            No. of Quotes Finalized
+                        </div>
+                    </div>
+                    <a class="more" href="#">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat green-haze">
+                    <div class="visual">
+                        <i class="fa fa-files-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            04
+                        </div>
+                        <div class="desc">
+                            No. of&nbsp; Quotes Yet To Responed
+                        </div>
+                    </div>
+                    <a class="more" href="#">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat purple-plum">
+                    <div class="visual">
+                        <i class="fa fa-file-text-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            30
+                        </div>
+                        <div class="desc">
+                           Total No. of&nbsp; Quotes
+                        </div>
+                    </div>
+                    <a class="more" href="#">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+			<!-- END DASHBOARD STATS -->
+
+			
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box green">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-file-text-o"></i>Port Titles
+							</div>
+							
+						</div>
+						<div class="portlet-body">
+							<div class="table-toolbar">
+								
+							</div>
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<thead>
+							<tr>
+								
+								<th>
+									 Title Types
+								</th>
+								<th>
+									 Status
+								</th>
+								
+								<th>
+									 Type of Transaction 
+								</th>
+								<th>
+									 Kind of Transaction 
+								</th>
+								<th>
+									 Date
+								</th>
+								<th>
+									 Policy Type 
+								</th>
+								
+								<th>
+									 Actions
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Title Insurance
+								</td>
+								<td>
+									<a href="#" class="label label-sm label-danger">
+                                     Yet To Responed
+                                </a>
+								</td>
+								<td>
+									 Residential
+								</td>
+								
+								<td class="center">
+									  Refinance
+								</td>
+								<td class="center">
+									 12 Jan 2012
+								</td>
+								<td class="center">
+									 Loan Policy
+								</td>
+								
+								<td>
+								<button class="btn btn-xs btn-warning" 
+								style="background-color:darkturquoise !important" title="Responed">
+								<i class=" fa fa-reply iconsize"></i></button>&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+								
+								
+								
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Limited Title Report
+								</td>
+								<td>
+									<span class="label label-sm label-success">
+									Responded </span>
+								</td>
+								<td>
+									 Commercial
+								</td>
+								<td class="center">
+									 Purchase
+								</td>
+								<td class="center">
+									 12 Mar 2015
+								</td>
+								<td>
+									Owner's Policy
+								</td>
+								
+								<td>
+								<button class="btn btn-xs btn-primary" title="view">
+								<i class="fa fa-eye iconsize"></i>
+								</button>&nbsp;&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Limited Title Report
+								</td>
+								<td>
+									<span class="label label-sm label-success">
+									Responded </span>
+								</td>
+								<td>
+									  Residential
+								</td>
+								<td class="center">
+									  Refinance
+								</td>
+								<td class="center">
+									 26 Apr 2015
+								</td>
+								<td>
+									Owner's Policy
+								</td>
+								<td>
+								<button class="btn btn-xs btn-primary" title="View">
+								<i class="fa fa-eye iconsize"></i>
+								</button>&nbsp;&nbsp;
+								<button class="btn btn-xs btn-warning"  title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Title Insurances
+								</td>
+								<td>
+									<span class="label label-sm label-danger">
+									Yet To Responed </span>
+								</td>
+								<td>
+									  Residential
+								</td>
+								<td class="center">
+									  Refinance
+								</td>
+								<td class="center">
+									 12 Jan 2015
+								</td>
+								<td>
+									Owner's Policy
+								</td>
+								<td>
+								<button class="btn btn-xs btn-warning" 
+								style="background-color:darkturquoise !important" title="Responed">
+								<i class=" fa fa-reply iconsize"></i></button>&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Limited Title Report
+								</td>
+								<td>
+									<span class="label label-sm label-danger">
+									Yet To Responed </span>
+								</td>
+								<td>
+									 Commercial
+								</td>
+								</td>
+								<td class="center">
+									 Purchase
+								</td>
+								<td class="center">
+									 12 Mar 2015
+								</td>
+								<td>
+									Loan Policy
+								</td>
+								<td>
+								<button class="btn btn-xs btn-warning" 
+								style="background-color:darkturquoise !important" title="Responed">
+								<i class=" fa fa-reply iconsize"></i></button>&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Title Insurances
+								</td>
+								<td>
+									<span class="label label-sm label-success">
+									Responded </span>
+								<td>
+									 Commercial
+								</td>
+								</td>
+								<td class="center">
+									 Purchase
+								</td>
+								<td class="center">
+									 12 Mar 2015
+								</td>
+								<td>
+									Loan Policy
+								</td>
+								<td>
+								<button class="btn btn-xs btn-primary" title="View">
+								<i class="fa fa-eye iconsize"></i>
+								</button>&nbsp;&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							<tr class="odd gradeX">
+								
+								<td>
+									 Limited Title Report
+								</td>
+								<td>
+									<span class="label label-sm label-success">
+									Responded </span>
+								</td>
+								<td>
+									 Commercial
+								</td>
+								</td>
+								<td class="center">
+									 Refinance
+								</td>
+								<td class="center">
+									 12 Mar 2015
+								</td>
+								<td>
+									Owner's Policy
+								</td>
+								<td>
+								<button class="btn btn-xs btn-primary" title="View">
+								<i class="fa fa-eye iconsize"></i>
+								</button>&nbsp;&nbsp;
+								<button class="btn btn-xs btn-warning" title="delete"
+								style="background-color:#89C4F4 !important">
+								<i class=" fa fa-trash iconsize"></i></button>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
 			</div>
-			</div>
+			
+		</div>
 	</div>
-</div>
-
-			<div class="Copy-right" style="  color: white;">
-        <span class="page-footer-inner"> 2015 © Business Management Portal by Title Quotes.<a href="LoanOfficerDashboard2.html" style="  color: white">Dashboard</a></span>
-		<div class="scroll-to-top">
-            <i class="icon-arrow-up"></i>
-        </div>
+	<div class="copyright" style="color:white">
+         2015 © Business Management Portal by Title Quotes.<a href="AgencyDashboard.html">Dashboard</a>
     </div>
-			
 	<script src="./themes/global/plugins/jquery.min.js" type="text/javascript"></script>
     <script src="./themes/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
     <script src="./themes/global/plugins/jquery.min.js" type="text/javascript"></script>
@@ -279,6 +613,9 @@
     <script src="./themes/global/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
 
     <!-- END PAGE LEVEL PLUGINS -->
+		<script type="text/javascript" src="./themes/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="./themes/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="./themes/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="./themes/global/scripts/metronic.js" type="text/javascript"></script>
     <script src="./themes/admin/layout/scripts/layout.js" type="text/javascript"></script>
@@ -286,6 +623,7 @@
     <script src="./themes/admin/layout/scripts/demo.js" type="text/javascript"></script>
     <script src="./themes/admin/pages/scripts/index.js" type="text/javascript"></script>
     <script src="./themes/admin/pages/scripts/tasks.js" type="text/javascript"></script>
+	<script src="./themes/admin/pages/scripts/table-managed.js"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
         jQuery(document).ready(function () {
@@ -297,28 +635,10 @@
             Index.initDashboardDaterange();
             Index.initJQVMAP(); // init index page's custom scripts
             Index.initCalendar(); // init index page's custom scripts
-            Index.initCharts(); // init index page's custom scripts
-            Index.initChat();
-            Index.initMiniCharts();
+             TableManaged.init();
             Tasks.initDashboardWidget();
             ComponentsPickers.init();
         });
     </script>
-	<script>
-
-    
-        $('#fu-my-simple-upload').change(function (e) {
-
-            var img = URL.createObjectURL(e.target.files[0]);
-            if (img ) {
-                $('.useriamge').attr('src', img);
-            }
-            else {
-                preventDefault(e);
-            }
-        });
-    
-    
-</script>
 	</body>
 </html>
