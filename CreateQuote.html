@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title Quotes</title>
-
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link href="./Scripts/jquery.fileupload.css" rel="stylesheet" />
     <link href="./Content/bootstrap.css" rel="stylesheet" />
     <link href="./Content/bootstrap.min.css" rel="stylesheet" />
     <link href="./Content/Site.css" rel="stylesheet" />
     <link href="./Content/Title.css" rel="stylesheet" />
-    <link href="./Content/port.css" rel="stylesheet" />
+     <link href="./Content/port.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!--end up to own css with bootsrtap -->
     <!--start with keen themes css scripts link-->
@@ -44,7 +44,6 @@
     <link href="./themes/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
     <link href="./themes/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="./themes/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./Content/style.css">
     <link rel="stylesheet" href="./Content/style.css">
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico" />
@@ -95,12 +94,12 @@
                     </a>&nbsp;&nbsp;&nbsp;
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="LoanOfficerUserProfile.html">
+                            <a href="AgencyDashboard.html">
                                 <i class="icon-user"></i> My Profile
                             </a>
                         </li>
                         <li>
-                            <a href="ChangePassword.html">
+                            <a href="AgencyChangepassword.html">
                                 <i class="icon-key"></i> Change password
                             </a>
                         </li>
@@ -126,8 +125,8 @@
     <div class="page-container">
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar-wrapper">
-            <div class="page-sidebar navbar-collapse collapse" >
-                 <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="background-color:white;border:1px solid #000">
+            <div class="page-sidebar navbar-collapse collapse">
+                <ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="background-color:white;border:1px solid #000">
                     <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                     <li class="sidebar-toggler-wrapper">
                         <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -149,38 +148,28 @@
                         </form>
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
-                    <li >
-                        <a href="LoanOfficerDashboard.html">
+                    <li class="start active open">
+                        <a href="AgencyDashboard.html">
                             <i class="icon-home"></i>
                             <span class="title">Dashboard</span>
-                            
-                            <span class="arrow "></span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
                         </a>
 
                     </li>
-                    <li class="start active open">
-                        <a href="CreateLoan.html">
-                            <i class="icon-user"></i>
-                            <span class="title">Create Loan Information</span>
-							
-                            <span class="selected" ></span>
-							 <span class="arrow open"></span>
-                        </a>
-
-                    </li>
+                    
                     <li>
-                        <a href="LoanofficerUserProfile.html">
+                        <a href="AgencyProfile.html">
                             <i class="icon-check"></i>
                             <span class="title">My Profile</span>
                             <span class="arrow "></span>
                         </a>
                     </li>
-                    <li >
-                        <a href="ChangePassword.html">
+                    <li>
+                        <a href="AgencyChangepassword.html">
                             <i class="icon-question"></i>
                             <span class="title">Change Password</span>
-							<span class="selected" ></span>
-							 <span class="arrow "></span>
+
                         </a>
                     </li>
                 </ul>
@@ -188,332 +177,211 @@
             </div>
         </div>
 <div class="page-content-wrapper" style="background-color: white;">
-            <div class="page-content ">
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			
-   
-
-	
-    <!-- END FORM-->
-    <h3 class="page-title top3" >
-			Edit Loan Information	
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
+			
+			<!-- END STYLE CUSTOMIZER -->
+			<!-- BEGIN PAGE HEADER-->
+			<h3 class="page-title top3" >
+			Create Quote	
 			</h3>
 			
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row">
-				<div class="col-md-12">
-					<div class="portlet box blue" id="form_wizard_1">
-						<div class="portlet-title">
-							<div class="caption">
-								
-							</div>
-						</div>
-						<div class="portlet-body form">
-							<form action="#" class="form-horizontal" id="submit_form" method="POST">
-								<div class="form-wizard">
-									<div class="form-body">
-										<ul class="nav nav-pills nav-justified steps">
-											<li>
-												<a href="#tab1" data-toggle="tab" class="step">
-												<span class="number">
-												1 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Primary Details </span>
-												</a>
-											</li>
-											<li>
-												<a href="#tab2" data-toggle="tab" class="step">
-												<span class="number">
-												2 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i>Transaction Details</span>
-												</a>
-											</li>
-											<li>
-												<a href="#tab3" data-toggle="tab" class="step active">
-												<span class="number">
-												3 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Loan Terms </span>
-												</a>
-											</li>
-											
-										</ul>
-										<div id="bar" class="progress progress-striped" role="progressbar">
-											<div class="progress-bar progress-bar-success">
-											</div>
-										</div>
-										<div class="tab-content">
-											<div class="alert alert-danger display-none">
-												<button class="close" data-dismiss="alert"></button>
-												You have some form errors. Please check below.
-											</div>
-											<div class="alert alert-success display-none">
-												<button class="close" data-dismiss="alert"></button>
-												Your form validation is successful!
-											</div>
-											
-											<div class="tab-pane active" id="tab1" style="margin-top:-3%">
-											
-												<h3 class="block">Provide Primary details</h3>
-												<div class="row">
-												<div class="col-md-6">
-												<div class="form-body">
-            <div class="form-group">
-                <label class="col-md-4 control-label">What do You Need?</label>
-                <div class="col-md-6">
-                    <select class="form-control ">
-                        <option value="">Title Insurance</option>
-                        <option value="">limited Title Report</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label">Property Address</label>
-                <div class="col-md-3">
-                    <input type="text" class="form-control " placeholder="Street No.">
-
-                </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-control " placeholder="Street Name">
-
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="City">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="State">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="County">
-                </div>
-            </div>
-           </div>
-             </div>
-			<div class="col-md-6">
-			<div class="form-group">
-                <label class="col-md-4 control-label">Parcel</label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control browsecss" placeholder="#(if Available)">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label">Legal Description</label>
-                <div class="col-md-6">
-                    <textarea type="text"  class="form-control browsecss" placeholder=""></textarea>
-                   
-                </div>
-            </div>
-           
-
-            <div class="form-group">
-            <label class="col-md-4 control-label">Attachment</label>
-            <div class="col-md-8">
-                <input type="text" class="" id="tbx-file-path" value="No file chosen..." readonly="readonly" />
-                <span class="btn btn-success fileinput-button">
-                    <span>Browse...</span>
-                    <input type="file" onchange="CopyMe(this, 'tbx-file-path');" id="fu-my-simple-upload" class="file ">
-                </span>
-            </div>
-        </div>
-			</div>
-											</div>
-											</div>
-											<div class="tab-pane" id="tab2" style="margin-top:-3%">
-												<h3 class="block">Provide Transaction Details</h3>
-												<div class="row">
-												<div  class="col-md-5">
-												<div class="form-body">
-												<div class="form-group">
-												<label class="col-md-4 control-label">kind of transaction</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<div class="icheck-list">
-															<label>
-																<input type="radio" name="radio" checked class="icheck"> Purchase
-															</label>
-															<label>
-																<input type="radio" name="radio" value="refinance" id="refid"  class="icheck"> Refinance
-															</label>
-															<label>
-																<input type="radio" name="radio" value="other" class="icheck"> other
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-            <div class="form-group" id="othertext">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="other">
-                </div>
-            </div>
-			<div class="form-group">
-                <label class="col-md-4 control-label">Type Of transaction</label>
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <div class="icheck-list">
-                            <label>
-                                <input type="radio" name="radio1" value="res" checked class="icheck nonchk"> Residential
-                            </label>
-                            <label>
-                                <input type="radio" name="radio1" value="commerical" class="icheck nonchk"> Commerical
-                            </label>
-                            <label>
-                                <input type="radio" name="radio1" id="nonchk" value="noncommerical" class="icheck nonchk"> NoN-Commerical
-                            </label>
-                        </div>
+        <div class="col-md-6">
+            <div class="portlet light br">
+                <div class="portlet-title">
+                    <div class="caption font-green-sharp">
+                        <i class=""></i>
+                        <span class="caption-subject bold uppercase green-haze">Title Insurance</span>
                     </div>
-                </div>
-            </div>
-			<div class="form-group" id="noncommericaltext">
-                <label class="col-md-4 control-label"></label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control " placeholder="explain">
-                </div>
-            </div>
-            
-						</div>	
-</div>
-<div class=" col-md-5">
-<div class="form-group">
-                <label class="col-md-4 control-label">What is needed?</label>
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <div class="icheck-list">
-                            <label>
-                                <input type="radio" name="radio2" id="ownchk" class="icheck radioread"> Owner's Policy Only
-                                <input type="text" class="form-control  read" id="owner"  placeholder="Owner's Policy">
-                            </label>
-                            <label>
-                                <input type="radio" name="radio2" checked class="icheck"> Loan Policy Only
-                                <input type="text" class="form-control " id="loan" placeholder="Loan Policy">
-                            </label>
-                            <label>
-                                <input type="radio" name="radio2" id="loanchk" class="icheck radioread"> Owner's Policy & Loan Policy
-                                <input type="text" class="form-control  read" id="ownloan" placeholder="Owner's Policy">
-                            </label>
-                            <label >
-                                
-                                <input type="text" class="form-control  lbl read" id="loanother" placeholder="Loan policy">
-                            </label>
-                        </div>
+                    <div class="actions">
+                        <span class="caption-subject viewgreenfont">
+                            Owner's Policy Only
+                        </span>
+
                     </div>
+                    
                 </div>
-            </div>
-</div>
 
-
-
-</div>						
-												
-												
-											</div>
-											<div class="tab-pane" id="tab3" style="margin-top:-2%">
-												<h3 class="block">Provide Loan Term's</h3>
-												 <div class="form-group">
-                <label class="col-md-4 control-label">Will Title Company</label>
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <div class="icheck-inline">
-                            <label>
-                                <input type="radio" name="radio3" class="icheck"> yes
-                            </label>
-                            <label>
-                                <input type="radio" name="radio3" checked class="icheck"> No
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-												 <div class="form-group">
-                <label class="col-md-4 control-label">Handle the closing?</label>
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <div class="icheck-inline">
-                            <p>
-                                If Yes, Will a Closing Protection Letter(CPL)<br />be Required?
-                            </p>
-                            <div class="icheck-inline">
-                                <label>
-                                    <input type="radio" name="radio4" class="icheck"> yes
-                                </label>
-                                <label>
-                                    <input type="radio" name="radio4" checked class="icheck"> No
-                                </label>
-                                <label>
-                                    <input type="radio" name="radio4" checked class="icheck"> Not Sure
-                                </label>
+                <div class="portlet-body">
+                    <div class="" style="height:" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                        <h4 class="h4color">Primary Address</h4>
+                        <div class="portlet-body">
+                            <div class="row static-info">
+                                <div class="col-md-2 name">
+                                    Street:
+                                </div>
+                                <div class="col-md-6 value">
+                                    7971 Liberty Street,
+                                </div>
+                            </div>
+                            <div class="row static-info">
+                                <div class="col-md-2 name">
+                                    City:
+                                </div>
+                                <div class="col-md-6 value">
+                                    Asheville,
+                                </div>
+                            </div>
+                            <div class="row static-info">
+                                <div class="col-md-2 name">
+                                    State:
+                                </div>
+                                <div class="col-md-6 value">
+                                    NC 20009,
+                                </div>
+                            </div>
+                            <div class="row static-info">
+                                <div class="col-md-2 name">
+                                    Countryr:
+                                </div>
+                                <div class=" col-md-6 value">
+                                    Buncombe.
+                                </div>
                             </div>
                         </div>
+
+                        <h4 class="h4color">Legal Description</h4>
+
+                        <p>
+                            It is a 2 floors building in 3Acrs Land
+                            located at the state of North Carolina with a Address of  7971 Liberty Street Asheville.
+                            Now it is owned by Mr.Jasper Herold
+                            and main advantage is nearer to BUS STOP
+                        </p>
+                        <h4 class="h4color">Desired</h4>
+                        <p>Title Company handle the closing.</p>
+                        <p>Closing Protection Letter (CPL) is not required</p>
+                        <p>Deed need to be prepared.</p>
                     </div>
+                    <hr />
+                    <span class="caption-helper ">Kind of transaction:&nbsp;Purchase</span>&nbsp;&nbsp;&nbsp;
+                    <span class="caption-helper">Type of transaction:&nbsp;Purchase</span>&nbsp;&nbsp;&nbsp;
+                    <span class="caption-helper">Owner's Policy Only&nbsp;$45,000</span>
                 </div>
+               
             </div>
-												<div class="form-group">
-                <label class="col-md-4 control-label">Will a deed need<br />to be Prepared?</label>
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <div class="icheck-inline">
-                            <label>
-                                <input type="radio" name="radio5" class="icheck"> yes
-                            </label>
-                            <label>
-                                <input type="radio" name="radio5" checked class="icheck"> No
-                            </label>
-                            <label>
-                                <input type="radio" name="radio5" checked class="icheck"> Not Sure
-                            </label>
+        </div>
+       
+        <div class=" col-md-3">
+            <div action="#" class="form-horizontal ">
+                <div class="form-body">
+                  
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Title Insurance Premium</label>
+                                <input type="text" class="form-control " placeholder="Owner's Policy'">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Title Search</label>
+                                <input type="text" class="form-control " placeholder="Title Search">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Title Exam</label>
+                                <input type="text" class="form-control " placeholder="Title Exam">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Processing Fee</label>
+                                <input type="text" class="form-control " placeholder="Processing Fee $">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Closing Protection Letter</label>
+                                <input type="text" class="form-control " placeholder="Protection Letter">
+                            </div>
+                        </div>
+                    
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <label>Closing Fee</label>
+                            <input type="text" class="form-control " placeholder="Closing Fee $">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <label>Courier Fee</label>
+                            <input type="text" class="form-control " placeholder="Courier Fee $">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-offset-2 col-md-10">
+                    <a href="AgencyDashboard.html" onclick="alert('Quote Submitted Sucessfully..!')" class="btn btn-success">Submit Quote</a>
+                </div>
             </div>
-												
-												
-											</div>
-											
-											</div>
-										</div>
-									</div>
-									<div class="form-actions">
-										<div class="row">
-											<div class="col-md-offset-3 col-md-9">
-												<a href="javascript:;" class="btn default button-previous">
-												<i class="m-icon-swapleft"></i> Back </a>
-												<a href="javascript:;" class="btn blue button-next">
-												Continue <i class="m-icon-swapright m-icon-white"></i>
-												</a>
-												<a href="LoanOfficerDashboard.html" onclick="return alert('Loan Updated Successfully..!')"  class="btn blue button-submit">
-												Submit <i class="m-icon-swapright m-icon-white"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-    <!-- END FORM-->
-   
-	<div class="clearfix">
+        </div>
+        <div class=" col-md-3">
+            <div action="#" class="form-horizontal ">
+                <div class="form-body">
+                   
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Wire Fee</label>
+                                <input type="text" class="form-control " placeholder="Wire Fee">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Deed Prep Fee</label>
+                                <input type="text" class="form-control " placeholder="Deed Prep Fee">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Other Fees</label>
+                                <input type="text" class="form-control " placeholder="Other Exam">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Transfer Tax</label>
+                                <input type="text" class="form-control " placeholder="Transfer Tax">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Recording Fees</label>
+                                <input type="text" class="form-control " placeholder="Recording Fees $">
+                            </div>
+                        </div>
+                   
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <label>Your Quote Amount</label>
+                            <input type="text" class="form-control " placeholder="Total Quote $">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>Your Response</label>
+                            <textarea class="form-control " placeholder="" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
 			</div>
-			
-			</div>
-			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
 	</div>
 </div>
 
-			<div class="Copy-right" style="  color: white">
-        <span class="page-footer-inner"> 2015 © Business Management Portal by Title Quotes.<a href="LoanOfficerDashboard2.html" style="  color: white">Dashboard</a></span>
+			<div class="page-footer">
+        <span class="page-footer-inner"> 2015 © Business Management Portal by Title Quotes.</span>
 		<div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
         </div>
