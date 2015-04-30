@@ -184,7 +184,7 @@
     <hr />
 
 <div action="#" class="form-horizontal pull-left col-md-3">
-        <div class="portlet light profile-sidebar-portlet">
+       <div class="portlet light profile-sidebar-portlet">
             <!-- SIDEBAR USERPIC -->
             <div class="profile-userpic">
                 <img src="./images/default_user.png" class="img-responsive useriamge" alt="">
@@ -194,7 +194,7 @@
                 <span>Change Avatar..!</span>
                 <input type="file" onchange="CopyMe(this, 'txtFileName');" id="fu-my-simple-upload" class="file ">
             </span>
-           
+            
         </div>
        
 
@@ -651,7 +651,7 @@
         <div class="form-group">
             <div class="col-md-10">
                 <label class=""></label>
-                <button type="button" class="btn btn-success col-md-4">Save</button>
+                <a href="AgencyDashboard.html" onclick="return alert('Profile Saved Successfully')" class="btn btn-success col-md-4">Save</a>
             </div>
         </div>
     </div>
@@ -729,9 +729,9 @@
         });
     </script>
 	
-<script>
+	<script>
 
-    $(function () {
+    
         $('#fu-my-simple-upload').change(function (e) {
 
             var img = URL.createObjectURL(e.target.files[0]);
@@ -742,7 +742,12 @@
                 preventDefault(e);
             }
         });
-    });
+    
+    
+</script>
+<script>
+
+    
 
 
 
